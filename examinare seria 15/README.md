@@ -35,19 +35,19 @@ Trimiteți rezolvările (toate fișierele folosite în rezolvări, inclusiv fiș
 
 <img alt="bubble burst" src="resources/images/anim.gif" width="500px">
 
-5. Salvați în `localStorage` numărul de bule sparte în total și afișați-l în colțul din dreapta sus a ecranului.
+7. Salvați în `localStorage` numărul de bule sparte în total și afișați-l în colțul din dreapta sus a ecranului.
 
 ## C. gotta catch them all: events, canvas, fetch (2 puncte)
 
-9. Scrieți un fișier HTML `poke.html` astfel încât să desenați, folosind fie elementul `canvas` (și cod JavaScript), fie cod CSS, un pokeball ca în imaginea de mai jos (hint: cercul mare are raza de 100px, cel mic 35px, grosimea liniei este de 10px).
+8. Scrieți un fișier HTML `poke.html` astfel încât să desenați, folosind fie elementul `canvas` (și cod JavaScript), fie cod CSS, un pokeball ca în imaginea de mai jos (hint: cercul mare are raza de 100px, cel mic 35px, grosimea liniei este de 10px).
 
 <img alt="pokeball" src="resources/images/pokeball.png" width="200px">
 
 Dacă nu știți să desenați mingea folosind canvas sau CSS, puteți folosi imaginea 'resources/images/poke.png' pentru a continua rezolvarea subiectului (cu punctaj parțial, pentru neîndeplinirea primei cerințe).
 
-10. La apăsarea bilei, se va alege un pokemon din lista de pokemoni din fișierul `poke.json` (care poate fi descărcat din directorul `resources`). Folosiți fetch și promisiuni pentru a accesa conținutul fișierului pe un server http local (porniți un server http folosind, de exemplu, Python). La fiecare click pe bilă, se va alege aleator unul din pokemoni și se va afișa sub bilă un mesaj de forma "Nume-pokemon, I choose you! (number selections)". Numele pokemonului va fi extras din fișierul .json, iar numărul de selecții (de câte ori a fost ales pokemonul curent) va fi contorizat folosind `sessionStorage`.
+9. La apăsarea bilei, se va alege un pokemon din lista de pokemoni din fișierul `poke.json` (care poate fi descărcat din directorul `resources`). Folosiți fetch și promisiuni pentru a accesa conținutul fișierului pe un server http local (porniți un server http folosind, de exemplu, Python). La fiecare click pe bilă, se va alege aleator unul din pokemoni și se va afișa sub bilă un mesaj de forma "Nume-pokemon, I choose you! (number selections)" și imaginea pokemonului. Numele pokemonului va fi extras din fișierul .json, iar numărul de selecții (de câte ori a fost ales pokemonul curent) va fi contorizat folosind `sessionStorage`.
 
-11. La trecerea cu mouse-ul deasupra imaginii pokemonului ales, se va afișa sub imagine o listă neordonată conținând nivelul și abilitățile pokemonului extrase din fișierul .json.
+10. La trecerea cu mouse-ul deasupra imaginii pokemonului ales, se va afișa sub imagine o listă neordonată conținând nivelul și abilitățile pokemonului extrase din fișierul .json.
 
 <img alt="flags" src="resources/images/pika.png" width="300px">
 
