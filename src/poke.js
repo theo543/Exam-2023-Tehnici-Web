@@ -31,7 +31,7 @@ let $message = null;
 $canvas.addEventListener("click", async () => {
     let promise = fetch("poke.json").then(r => r.json());
     let json_array = await promise;
-    let choice = Math.round(Math.random() * json_array.length);
+    let choice = Math.min(Math.round(Math.random() * json_array.length), json_array.length - 1);
     let pokemon = json_array[choice];
     let selections = sessionStorage.getItem("selections");
     selections = (selections === null) ? 1 : parseInt(selections) + 1;
