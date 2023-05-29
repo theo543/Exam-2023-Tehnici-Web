@@ -1,4 +1,21 @@
 let $table = document.createElement("table");
+let $counter = document.createElement("span");
+$counter.classList.add("counter");
+document.body.appendChild($counter);
+
+function getCounter() {
+    return localStorage.getItem("counter") || "0";
+}
+
+function updateCounter() {
+    $counter.textContent = getCounter();
+}
+
+function incrementCounter() {
+    localStorage.setItem("counter", (parseInt(getCounter()) + 1).toString());
+}
+
+updateCounter();
 
 const burst_img = "images/bubble1.jpg";
 const burst_selector = `img[src="${burst_img}"]`;
@@ -51,6 +68,8 @@ function burst($img) {
     $audio.src = sounds[choice];
     $audio.addEventListener("ended", () => $audio.remove());
     document.body.appendChild($audio);
+    incrementCounter();
+    updateCounter();
 }
 
 document.body.addEventListener("keypress", event => {
