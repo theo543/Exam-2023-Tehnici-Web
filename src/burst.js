@@ -4,6 +4,7 @@ const burst_img = "images/bubble1.jpg";
 const burst_selector = `img[src="${burst_img}"]`;
 const bubble_img = "images/bubble0.jpg";
 const bubble_selector = `img[src="${bubble_img}"]`;
+const sounds = ["sounds/bubble1.mp3", "sounds/bubble2.mp3", "sounds/bubble3.mp3"];
 
 function appendRow() {
     let $tr = document.createElement("tr");
@@ -39,9 +40,17 @@ for(let i = 0;i<6;i++) {
 document.body.appendChild($table);
 
 function burst($img) {
-    if ($img.src === burst_img)
+    if ($img.getAttribute("burst"))
         return;
     $img.src = burst_img;
+    $img.setAttribute("burst", "true");
+    let $audio = document.createElement("audio");
+    let choice = Math.min(Math.round(Math.random() * sounds.length), sounds.length - 1);
+    $audio.controls = false;
+    $audio.autoplay = true;
+    $audio.src = sounds[choice];
+    $audio.addEventListener("ended", () => $audio.remove());
+    document.body.appendChild($audio);
 }
 
 document.body.addEventListener("keypress", event => {
@@ -50,7 +59,7 @@ document.body.addEventListener("keypress", event => {
         if(bubbles.length === 0)
             return;
         let choice = Math.min(Math.round(Math.random() * bubbles.length), bubbles.length - 1);
-        bubbles[choice].src = burst_img;
+        burst(bubbles[choice]);
     } else if (event.key.toLowerCase() === "r") {
         resetAll();
     }
