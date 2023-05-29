@@ -1,0 +1,75 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+    ". a a ."
+    "b c c d"
+    ". e e ."
+    ". f g .";
+    grid-template-columns: 100px 100px 100px 100px;
+    gap: 5px;
+}
+
+.container div {
+    text-align: center;
+    padding: 25px;
+    background-color: lightblue;
+    color: white;
+    border: green dotted 4px;
+}
+
+.container div#d0 div {
+    display: inline-block;
+    border: none;
+    color: green;
+    background-color: white;
+    border-radius: 50%;
+    transition: scale 0.4s ease-in-out;
+    width: 50%;
+}
+
+.container div#d0 div:hover {
+    background-color: yellow;
+    scale: 1.25;
+}
+
+.container div#d0 {
+    grid-area: a;
+}
+
+.container div#d1 {
+    grid-area: b;
+}
+
+.container div#d2 {
+    grid-area: c;
+}
+
+.container div#d3 {
+    grid-area: d;
+}
+
+.container div#d4 {
+    grid-area: e;
+}
+
+.container div#d5 {
+    grid-area: f;
+}
+
+.container div#d6 {
+    grid-area: g;
+}
+
+@media (min-width: 200px) and (max-width: 600px) {
+    .container {
+        display: block;
+    }
+}
