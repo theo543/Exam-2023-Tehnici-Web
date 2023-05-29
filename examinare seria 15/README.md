@@ -39,7 +39,7 @@ Trimiteți rezolvările (toate fișierele folosite în rezolvări, inclusiv fiș
 
 ## C. gotta catch them all: events, canvas, fetch (2 puncte)
 
-9. Scrieți un fișier HTML `poke.html` astfel încât să desenați, folosind fie elementul `canvas` (și cod JavaScript), fie cod CSS, un pokeball ca în imaginea de mai jos (hint: cercul mare are 100px, cel mic 35px, grosimea liniei este de 10px).
+9. Scrieți un fișier HTML `poke.html` astfel încât să desenați, folosind fie elementul `canvas` (și cod JavaScript), fie cod CSS, un pokeball ca în imaginea de mai jos (hint: cercul mare are raza de 100px, cel mic 35px, grosimea liniei este de 10px).
 
 <img alt="pokeball" src="resources/images/pokeball.png" width="200px">
 
